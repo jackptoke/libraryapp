@@ -1,7 +1,12 @@
-package dev.toke.libraryapp.services
+package dev.toke.libraryapp.db
 
-class DevDbConnectionService : DbConnectionService {
+import org.springframework.context.annotation.Profile
+import org.springframework.stereotype.Service
+
+@Service("DbConnectionService")
+@Profile("DEV", "default")
+class DevDbConnectionServiceImpl : DbConnectionService {
     override fun getConnectionString(): String {
-        TODO("Not yet implemented")
+        return "development:db:connection-string"
     }
 }

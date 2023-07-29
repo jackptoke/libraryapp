@@ -1,4 +1,4 @@
-package dev.toke.libraryapp.services
+package dev.toke.libraryapp.db
 
 interface DbConnectionService {
     fun getConnectionString() : String
